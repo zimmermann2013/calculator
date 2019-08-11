@@ -33,7 +33,6 @@ pipeline {
             }
         }
         stage('SonarQube analysis') {
-                withSonarQubeEnv('Sonar') {
                   sh './gradlew sonarqube' +
                   '-Dsonar.projectKey=calculator:all:master ' +
                   '-Dsonar.login=admin' +
@@ -43,7 +42,6 @@ pipeline {
                   '-Dsonar.tests=. ' +
                   '-Dsonar.test.inclusions=**/*Test*/** ' +
                   '-Dsonar.exclusions=**/*Test*/**'
-                }
         }
     }
 
