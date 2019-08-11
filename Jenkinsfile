@@ -38,6 +38,7 @@ pipeline {
                   -Dsonar.projectKey=calculator \
                   -Dsonar.host.url=http://195.128.103.73:9000 \
                   -Dsonar.login=a8e3a06d1be15dd0cb335c3de5ecf6c771723e8b
+                  }
             }
         }
     }
