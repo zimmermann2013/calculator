@@ -32,5 +32,19 @@ pipeline {
                 ])
             }
         }
+        stage('SonarQube analysis') {
+                withSonarQubeEnv('Sonar') {
+                  sh './gradlew sonarqube' +
+                  '-Dsonar.projectKey=calculator:all:master ' +
+                  '-Dsonar.login=admin' +
+                  '-Dsonar.password=KeNB2nrwj8Hj6070n5OQDX2rx' +
+                  '-Dsonar.language=java ' +
+                  '-Dsonar.sources=. ' +
+                  '-Dsonar.tests=. ' +
+                  '-Dsonar.test.inclusions=**/*Test*/** ' +
+                  '-Dsonar.exclusions=**/*Test*/**'
+                }
+            }
     }
+
 }
