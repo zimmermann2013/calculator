@@ -3,6 +3,9 @@ package com.zimmermann.calculator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Start class
+ */
 @SpringBootApplication
 public class CalculatorApplication {
 
