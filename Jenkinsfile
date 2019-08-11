@@ -44,7 +44,7 @@ pipeline {
                   '-Dsonar.test.inclusions=**/*Test*/** ' +
                   '-Dsonar.exclusions=**/*Test*/**'
                 }
-            }
+        }
     }
 
 }
