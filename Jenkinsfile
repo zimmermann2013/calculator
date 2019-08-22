@@ -65,5 +65,11 @@ pipeline {
                 sh "docker run -d --rm -p 8765:8090 --name calculator zimmermann2018/calculator"
             }
         }
+        stage("Acceptance test") {
+            steps {
+                sleep 60
+                sh "./acceptance_test.sh"
+            }
+        }
     }
 }
