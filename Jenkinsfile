@@ -60,6 +60,11 @@ pipeline {
                 sh "docker push zimmermann2018/calculator:latest"
             }
         }
+        stage("Stop old container") {
+            steps {
+                sh "docker stop calculator"
+            }
+        }
         stage("Deploy to staging") {
             steps {
                 sh "docker run -d --rm -p 8765:8090 --name calculator zimmermann2018/calculator"
