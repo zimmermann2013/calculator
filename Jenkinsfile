@@ -62,7 +62,7 @@ pipeline {
         }
         stage("Deploy to staging") {
             steps {
-                sh "docker run -d --rm -p 8765:8090 --name calculator zimmermann2018/calculator"
+                sh "docker run -d --rm -p 8765:8090 --name calculator zimmermann2018/calculator:latest"
             }
         }
         stage("Acceptance test") {
