@@ -47,12 +47,12 @@ pipeline {
         }
         stage("Docker build") {
             steps {
-                sh "docker build -t zimmermann/calculator ."
+                sh "docker build -t zimmermann2018/calculator ."
             }
         }
         stage("Docker push") {
             steps {
-                sh "docker push zimmermann/calculator"
+                sh "docker push zimmermann2018/calculator"
             }
         }
     }
