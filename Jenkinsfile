@@ -32,7 +32,7 @@ pipeline {
                 ])
             }
         }
-        stage('SonarQube analysis') {
+        stage('SonarQube analysis feature branch') {
             steps {
                   sh "./gradlew sonarqube \
                            -Dsonar.projectKey=calculator \
