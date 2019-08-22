@@ -50,9 +50,14 @@ pipeline {
                 sh "docker build -t zimmermann2018/calculator ."
             }
         }
+        stage("Docker login") {
+            steps {
+                sh "docker login"
+            }
+        }
         stage("Docker push") {
             steps {
-                sh "docker push zimmermann2018/calculator:tagname"
+                sh "docker push zimmermann2018/calculator:latest"
             }
         }
     }
