@@ -75,7 +75,6 @@ pipeline {
     post {
         always {
             sh "docker stop calculator"
-            sh "docker rmi calculator zimmermann2018/calculator:latest"
             sh "docker pull zimmermann2018/calculator:latest"
         }
     }
