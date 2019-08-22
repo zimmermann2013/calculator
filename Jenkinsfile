@@ -50,11 +50,6 @@ pipeline {
                 sh "docker build -t zimmermann2018/calculator ."
             }
         }
-        stage("Docker tag") {
-            steps {
-                sh "docker tag calculator zimmermann2018/calculator:1"
-            }
-        }
         stage("Docker login") {
             steps {
                 sh "docker login --username zimmermann2018 --password Molotok2018"
