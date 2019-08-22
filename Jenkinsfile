@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Compile") {
             steps {
-                sh "./gradlew compileJava"
+                sh "./gradlew compileJava & git update-index --chmod=+x gradlew"
             }
         }
         stage("Unit test") {
@@ -67,7 +67,7 @@ pipeline {
         }
         stage("Acceptance test") {
             steps {
-                sleep 60
+                sleep 20
                 sh "./acceptance_test.sh"
             }
         }
