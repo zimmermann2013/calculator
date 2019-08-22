@@ -52,7 +52,7 @@ pipeline {
         }
         stage("Docker push") {
             steps {
-                sh "docker push zimmermann2018/calculator"
+                sh "docker push zimmermann2018/calculator:tagname"
             }
         }
     }
